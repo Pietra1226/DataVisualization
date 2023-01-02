@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="bar-chart-container"></div>
+        <div class="line-chart-container"></div> 
+        <div class="scatter-plot-container"></div>
+        <div class="selected-container">
+            <div class="selected-header">Selected Element</div>
+            <div class="selected-body"></div>
+        </div>
+        
+        <style>
+            /* (A) ALL ITEMS TO INLINE-BLOCK */
+            .controls > * { display: inline-block; }
+            .yasix > * { display: inline-block; }
+            .line > * { display: inline-block; }
+            .scatter > * { display: inline-block; }
+            .ybutton > * {
+                 margin:0;
+            }
+        </style>
+        
+        <div class="controls">
+            <p>y軸:&ensp;</p>
+            <button data-name="company">Company</button>
+            <button data-name="title">Title</button>
+            <button data-name="Race">Race</button>
+            <button data-name="location">Location</button>
+        
+        </div>
+        <div class="yasix">
+            <p>x軸:&ensp;</p>
+            <div class="ybutton">
+                <button data-name="yearsatcompany">Job Tenure</button>
+                <button data-name="totalyearlycompensation">Total Yearly Compensation</button>
+            </div>
+        </div>
+        <div class="line">
+            <p>折線圖:&ensp;</p>
+            <button data-name="linechart1">Year & Salary</button>
+            <button data-name="linechart2">Job Tenure & Salary</button>
+        </div>
+        <div class="scatter">
+            <p>散布圖:&ensp;</p>
+            <button data-name="scatterchart">Bonus & Stock</button>
+        </div>
+        <div class="tooltip">
+            <!-- <div class="tip-header">
+                
+            </div> -->
+            <div class="tip-body"></div>
+        </div>
+        
+            <script src="//unpkg.com/d3"></script>
+            <script src="main.js"></script>   
+    </body>
+</html>

@@ -1,0 +1,114 @@
+body{
+    font-weight:bold;
+    margin:2rem;
+}
+h3{
+    font-weight:100;
+    color:#555;
+    margin:0.4rem 0;
+}
+svg,.selected-container{
+    border:1px solid#ccc;
+}
+
+button{
+    outline:none;
+    color:#555;
+    border-color:#eee;
+    background:#fefefe;
+    padding:3px 0px;
+    width:190px;
+    text-align:center;
+    transition:all 200ms;
+}
+button:hover{
+    background:lightgoldenrodyellow;
+}
+button:focus{
+    background:rgb(179, 239, 59);
+}
+
+/* interactive 詳細資訊視窗設定*/
+.tooltip{
+    position: fixed;
+    opacity: 0;
+    pointer-events: none; 
+    /*避免出現連結或其他預設行為*/
+    background: #eee;
+    max-width: 200px;
+}
+.tip-header{
+    border-bottom: 2p solid white;
+    padding: 0.9rem 1rem;
+}
+
+/* .tip-body{
+    padding: 0.2rem 0;
+}
+
+h3,h4{
+    font-size:0.9rem;
+    color:#555;
+    margin: 0;
+} */
+
+h4{
+    font-weight: normal;
+}
+
+.tip-info{
+    margin: 0;
+    padding: 0.3rem 1em;
+    font-size: 0.8em;
+}
+
+/*偶數元素設定不同背景樣式*/
+.tip-info:nth-of-type(even){
+    background: #e0e0e0;
+}
+
+/* Scatter Use */
+.axis .domain{
+    /*軸線的顏色*/
+    stroke:#bbb;
+}
+
+.axis .tick line{
+    stroke:#bbb;
+    stroke-width:0.5;
+    stroke-dasharray:4,2;
+}
+
+.selected-container{
+    display:flex;
+    flex-direction:column;
+    margin-left:1rem;
+}
+
+.selected-header{
+    background:#f0f0f0;
+    color:#777;
+    padding:0.5rem 2rem;
+    text-align:right;
+}
+
+.selected-body{
+    overflow:auto;
+    font-size:0.8em;
+    cursor:default;
+}
+
+.selected-title{
+    font-weight: bold;
+}
+
+.selected-element{
+    margin: 0.5em;
+    padding: 0.5em;
+    transition: background-color 200ms ease;
+}
+
+.selected-element:hover{
+    background-color:#f0f0f0;
+}
+
