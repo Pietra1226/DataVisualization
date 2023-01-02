@@ -492,7 +492,7 @@ function setupCanvas_line(lineChartData){
               .attr('class',d=>`line-series ${d.name.toLowerCase()}`)
               .attr('d',d=>lineGen(d.values))
               .style('fill', 'none').style('stroke', d=>d.color);
-    const xAxis = d3.axisBottom(xScale).tickSizeOuter(0).ticks(5);
+    const xAxis = d3.axisBottom(xScale).tickSizeOuter(0);
     this_svg.append('g').attr('class','x axis')
                         .attr('transform',`translate(0,${linechart_height})`)
                         .call(xAxis);
